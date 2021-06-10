@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 3.5.3">
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Vibrator.vibrate: android.permission.VIBRATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   vibrator.vibrate(VibrationEffect.createOneShot(milliseconds, VibrationEffect.DEFAULT_AMPLITUDE));"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/DefaultAndroidInput.java"
+            line="646"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Vibrator.vibrate: android.permission.VIBRATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   vibrator.vibrate(milliseconds);"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/DefaultAndroidInput.java"
+            line="648"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Vibrator.vibrate: android.permission.VIBRATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   vibrator.vibrate(VibrationEffect.createWaveform(pattern, repeat));"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/DefaultAndroidInput.java"
+            line="654"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Vibrator.vibrate: android.permission.VIBRATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   vibrator.vibrate(pattern, repeat);"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/DefaultAndroidInput.java"
+            line="656"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Vibrator.cancel: android.permission.VIBRATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="  vibrator.cancel();"
+        errorLine2="  ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/DefaultAndroidInput.java"
+            line="661"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="CommitPrefEdits"
+        severity="Warning"
+        message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call"
+        category="Correctness"
+        priority="6"
+        summary="Missing `commit()` on `SharedPreference` editor"
+        explanation="After calling `edit()` on a `SharedPreference`, you must call `commit()` or `apply()` on the editor to save the results."
+        errorLine1="   editor = sharedPrefs.edit();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/AndroidPreferences.java"
+            line="165"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.0.2 is available: 1.2.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compileOnly &apos;androidx.appcompat:appcompat:1.0.2&apos; "
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/build.gradle"
+            line="28"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `GLSurfaceView20` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="public class GLSurfaceView20 extends GLSurfaceView {"
+        errorLine2="             ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/surfaceview/GLSurfaceView20.java"
+            line="45"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `GLTextureView20` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="public class GLTextureView20 extends GLTextureView {"
+        errorLine2="             ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/textureview/GLTextureView20.java"
+            line="27"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        severity="Warning"
+        message="`DefaultAndroidInput#onTouch` should call `View#performClick` when a click is detected"
+        category="Accessibility"
+        priority="6"
+        summary="Accessibility in Custom Views"
+        explanation="If a `View` that overrides `onTouchEvent` or uses an `OnTouchListener` does not also implement `performClick` and call it when clicks are detected, the `View` may not handle accessibility actions properly. Logic handling the click actions should ideally be placed in `View#performClick` as some accessibility services invoke `performClick` when a click action should occur."
+        errorLine1=" public boolean onTouch (View view, MotionEvent event) {"
+        errorLine2="                ~~~~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/java/com/badlogic/gdx/backends/android/DefaultAndroidInput.java"
+            line="467"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlEnabled"
+        severity="Warning"
+        message="You must set `android:targetSdkVersion` to at least 17 when enabling RTL support (is 15)"
+        category="Internationalization:Bidirectional Text"
+        priority="3"
+        summary="Using RTL attributes without enabling RTL support"
+        explanation="To enable right-to-left support, when running on API 17 and higher, you must set the `android:supportsRtl` attribute in the manifest `&lt;application>` element.&#xA;&#xA;If you have started adding RTL attributes, but have not yet finished the migration, you can set the attribute to false to satisfy this lint check."
+        errorLine1="            android:supportsRtl=&quot;true&quot;>"
+        errorLine2="                                 ~~~~">
+        <location
+            file="/Users/caicai/Downloads/Libgdx-Backend-TextureView-Android-master/gdx-backend-android-textureview/src/main/AndroidManifest.xml"
+            line="5"
+            column="34"/>
+    </issue>
+
+</issues>
